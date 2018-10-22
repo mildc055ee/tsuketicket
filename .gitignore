@@ -1,0 +1,8 @@
+node_modules/
+yarn.lock
+*.log
+DS_Store
+#for parcel 
+.cache/
+*.map
+dist/
