@@ -33,4 +33,4 @@ parcelRequire=function(e,r,n,t){var i="function"==typeof parcelRequire&&parcelRe
 },{"./Canvas":"dk9+","./Create":"XA2x","./Form":"u8ML","./LinearAlgebra":"6N3l","./Num":"CgN8","./Op":"tFVq","./Pt":"BHxS","./Space":"G0Vi","./Color":"M48/","./Util":"JvTU","./Dom":"V//2","./Svg":"Zllc","./Typography":"Xywr","./Physics":"y9r9","./UI":"gnCG"}],"LQOA":[function(require,module,exports) {
 "use strict";exports.__esModule=!0;var e,t,n=require("pts"),r=new n.CanvasSpace("#card").setup({bgcolor:"#ffffff"}),a=r.getForm();r.add({start:function(a){var i=n.Create.distributeLinear([new n.Pt(0,r.center.y),new n.Pt(r.width,r.center.y)],50),s=n.Create.gridPts(r.innerBound,20,20);e=n.Create.noisePts(i,.1,.1),t=n.Create.noisePts(s,.05,.1,20,20)},animate:function(n,i){var s=r.pointer.$subtract(r.center).divide(r.center).abs();t.map(function(e,t){e.step(.01*s.x,.01*(1-s.y)),a.fillOnly(["#ab9","#280","#fca"][t%3]).point(e,Math.abs(e.noise2D()*r.size.x/20))});e.map(function(e){return e.step(.01*(1-s.x),.05*s.y),e.$add(0,e.noise2D()*r.center.y)})}}),r.bindMouse().play();
 },{"pts":"cAGG"}]},{},["LQOA"], null)
-//# sourceMappingURL=/ts.0fc3a9e5.map
+//# sourceMappingURL=/ts.cc1b4d0b.map
