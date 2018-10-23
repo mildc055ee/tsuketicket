@@ -9,7 +9,7 @@ export function saveImage(canvasId: string, fileName: string, format: string) {
 	}
 	else {
 		const canvas = <HTMLCanvasElement>document.getElementById(canvasId);
-		const imgURL = canvas.toDataURL(MIME_TYPE, 1);
+		const imgURL = canvas.toDataURL();
 		const a = document.createElement('a');
 		a.download = `${fileName}.${FILE_EXTENTION}`;
 		a.href = imgURL;
