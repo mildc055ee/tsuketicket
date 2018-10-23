@@ -1,8 +1,4 @@
-document.getElementById('create').onclick = () => {
-	saveImage('card', 'tsuke', 'png');
-}
-
-function saveImage(canvasId: string, fileName: string, format: string) {
+export function saveImage(canvasId: string, fileName: string, format: string) {
 	const MIME_TYPE = 'image/png';
 	const FILE_EXTENTION = format;
 
