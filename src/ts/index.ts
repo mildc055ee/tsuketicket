@@ -1,4 +1,4 @@
-import { CanvasSpace, Pt, Group, Rectangle, Num, Line, Create, Delaunay } from 'pts';
+import { CanvasSpace, Pt, Group, Create } from 'pts';
 
 const space = new CanvasSpace("#card")
 	.setup({ bgcolor: "#ffffff" });
@@ -29,7 +29,7 @@ space.add({
 		});
 
 		// Generate noise in a line
-		let nps = noiseLine.map((p) => {
+		let nps = noiseLine.map(p => {
 			p.step(0.01 * (1 - speed.x), 0.05 * speed.y);
 			return p.$add(0, p.noise2D() * space.center.y);
 		});

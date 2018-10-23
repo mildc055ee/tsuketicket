@@ -6,3 +6,4 @@ DS_Store
 .cache/
 *.map
 dist/
+docs/

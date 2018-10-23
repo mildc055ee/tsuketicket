@@ -7,12 +7,7 @@ html,body{
 	width: 100%;
 	max-width: 100%;
 	margin: 0;
-	background: #67B26F;
-	/* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #4ca2cd, #67B26F);
-	/* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(45deg, #41b4ee, rgb(96, 247, 164));
-	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -22,7 +17,7 @@ footer{
 	text-align: center;
 	margin-right: 0px;
 	div{
-		position: center;
+		text-align: center;
 	}
 }
 
