@@ -1,6 +1,7 @@
 # Card Design Generator
 ## env
-parcel + pug + scss + typescript
+parcel + pug + scss + typescript  
+NO ANY CSS FRAMEWORK USED!!
 ## install dependencies
 ```bash
 yarn
