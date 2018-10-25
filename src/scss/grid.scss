@@ -1,4 +1,4 @@
-$canvas-margin: 20px;
+$canvas-margin: auto;
 
 @mixin mq($breakpoint) {
 	@if $breakpoint==xsmall {
@@ -7,8 +7,6 @@ $canvas-margin: 20px;
 
 			#card {
 				margin: $canvas-margin auto;
-				width: 345px;
-				height: 209px;
 				background-color: none;
 			}
 		}
@@ -19,8 +17,6 @@ $canvas-margin: 20px;
 			@content;
 			#card {
 				margin: $canvas-margin auto;
-				width: 345px;
-				height: 209px;
 				background-color: none;
 			}
 		}
@@ -31,8 +27,6 @@ $canvas-margin: 20px;
 			@content;
 			#card {
 				margin: $canvas-margin auto;
-				width: 690px;
-				height: 418px;
 				background-color: none;
 			}
 		}
@@ -43,8 +37,6 @@ $canvas-margin: 20px;
 			@content;
 			#card {
 				margin: $canvas-margin auto;
-				width: 690px;
-				height: 418px;
 				background-color: none;
 			}
 		}
@@ -55,8 +47,6 @@ $canvas-margin: 20px;
 			@content;
 			#card {
 				margin: $canvas-margin auto;
-				width: 690px;
-				height: 418px;
 				background-color: none;
 			}
 		}
@@ -65,10 +55,8 @@ $canvas-margin: 20px;
 
 @mixin container() {
 	margin: 0px 15px;
-	padding: 10px 15px;
+	padding: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-	align-content: center;
-	text-align: center;
+	justify-content:center;
 }

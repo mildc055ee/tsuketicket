@@ -1,6 +1,12 @@
+import { deviceType } from './device';
+
 export function saveImage(canvasId: string, fileName: string, format: string) {
 	const MIME_TYPE = 'image/png';
 	const FILE_EXTENTION = format;
+	const defaultSize = {
+		width: 345,
+		height: 209
+	};
 
 	// for IE, Edge
 	if (navigator.msSaveOrOpenBlob) {
@@ -9,7 +15,20 @@ export function saveImage(canvasId: string, fileName: string, format: string) {
 	}
 	else {
 		const canvas = <HTMLCanvasElement>document.getElementById(canvasId);
-		const imgURL = canvas.toDataURL();
+		let imgURL = canvas.toDataURL();
+
+		//mobile or tablet?
+		if (deviceType() !== 'pc'){
+			const img = new Image();
+			img.onload = () => {
+				const imgCanvas = document.createElement('canvas');
+				imgCanvas.width = defaultSize.width;
+				imgCanvas.height = defaultSize.height;
+				canvas.getContext('2d').drawImage(img, 0, 0, defaultSize.width, defaultSize.height);
+				imgURL = canvas.toDataURL();
+			}
+		};
+
 		const a = document.createElement('a');
 		a.download = `${fileName}.${FILE_EXTENTION}`;
 		a.href = imgURL;

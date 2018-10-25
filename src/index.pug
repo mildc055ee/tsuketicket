@@ -11,12 +11,19 @@ html(lang="ja")
 	body
 		nav
 			h1 tsuke ticket
-		.content
-			canvas#card
-			div(style="display:inline-flex; justify-content:space-evenly")
+		.c
+			.canvas
+				canvas#card
+			.row
 				button#reload #[i.fas.fa-redo] change color
 				button#create #[i.fas.fa-download] download
-			footer 
-				div This software includes the work that is distributed in the Apache License 2.0
-		script(src="./ts/actions.ts")
+				a(href="https://github.com/mildc055ee/tsuketicket")
+					button#source #[i.fas.fa-code] view on github
+			h2 How to use
+			ul
+				li change colorボタンをクリックすると10通りのパレットからランダムに色が変わります。
+				li キャンバスの上でマウスを動かすとアニメーションの動きが変わります(スマホの場合はドラッグしてください)。
+				li 適当なタイミングでdownloadボタンを押すとその時点でのキャンバスの状態を画像として取得できます。
 		script(src="./ts/index.ts")
+		script(src="./ts/canvas.ts")
+		script(src="./ts/actions.ts")
