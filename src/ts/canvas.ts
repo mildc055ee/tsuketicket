@@ -2,8 +2,7 @@ import { CanvasSpace, Pt, Create, Noise } from 'pts';
 import { getPalette } from './palettes';
 import { deviceType } from './device';
 
-const space = new CanvasSpace("#card")
-	.setup({ bgcolor: "#ffffff" });
+const space = new CanvasSpace("#card");
 
 const form = space.getForm();
 const palette = getPalette();
